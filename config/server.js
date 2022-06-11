@@ -24,7 +24,9 @@ process.on('uncaughtException', (err , origin) => {
     console.log(err)
 })
 
-
+app.get('/test', (req, res) => {
+    return res.status(200).json({"message":"Success"})
+})
 
 app.listen(PORT, (error) => {
     if(error) console.log(`------unable to connect to server------${error}`)
