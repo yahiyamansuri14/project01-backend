@@ -1,12 +1,11 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const file_upload = require('express-fileupload')
 const cors = require('cors')
 const authRouter = require('../api/v1/routes/auth-routes/authRoute')
 const userRouter = require('../api/v1/routes/user-routes/userRoutes')
 const userServices = require('../api/v1/services/user-services/userServices')
 
-
+require('dotenv').config()
 require('../database/db')
 
 const app = express()
